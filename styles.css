@@ -1,0 +1,512 @@
+
+
+body{
+    /* border: 2px solid cyan; */
+    background-color: #192048;
+    color: white;
+}
+.container {
+    /*border: 1px solid black;*/
+    width: 92%;
+    height: auto;
+    padding: 2%;
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.row{
+    /*border: 1px solid red;*/
+    display: flex;
+    height: 370px;
+    justify-content: space-around;
+}
+.base-circle{
+    border-radius: 50%;
+}
+/* ----- navbar ------ */ 
+.topnav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    justify-content: space-around;
+    background-color:#192048;
+}
+
+.topnav a {
+    position: relative;
+    top: .2rem;
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    letter-spacing: .1rem;
+    font-weight: bolder;
+}
+.topnav a:hover, i:hover{
+    color: aqua;
+}
+.favourite-h,
+.search,
+.notification {
+    margin-top: .5rem;
+}
+
+.search i {
+    position: absolute;
+    color: white;
+    padding: 5px 0 0 5px;
+}
+
+.input-field {
+    border: none;
+    min-width: 80%;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #30365a;
+}
+
+.logo,
+.profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media only screen and (max-width: 552px) {
+    .topnav div:not(:first-child) {
+        display: none;
+    }
+    .topnav .logo{
+        display: block;
+        position: absolute;
+        top:1.5rem;
+        left: 20px;
+        float: left;
+        display: block;
+    }
+    .topnav .icon {
+        position: absolute;
+        top:1.5rem;
+        right: 20px;
+        float: right;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .profile-img, .logo{
+        height: 30px;
+        width: 30px;
+    }
+    .topnav .brand{
+        width: 30%;
+    }
+    .topnav .notification, .topnav .favourite-h{
+        display: none;
+    }
+}
+
+/*--------- */
+.main{
+    width: 70%;
+    /* border: 1px solid black; */
+}
+.aside{
+    width: 25%;
+    /* border: 1px solid black; */
+}
+/* ----- Carousel component ----- */
+.carousel{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    position: relative;
+    padding: .1rem;
+}
+.carousel-card{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    z-index: 1;
+    /* border: 1px solid black; */
+    background-image: url("https://picsum.photos/700/350");
+    background-repeat: no-repeat;
+    border-top-style: inset;
+    object-fit: cover;
+}
+.active{
+    z-index: 1;
+}
+
+.push-back-left{
+    position: absolute;
+    top: 15%;
+    width: 25%;
+    height: 70%;
+    z-index: -1;
+    left: 3rem;
+}
+.push-back-right{
+    position: absolute;
+    top: 15%;
+    width: 25%;
+    height: 70%;
+    z-index: -1;
+    right: 3rem;
+}
+/* ----- latest release component ----- */
+.latest-release{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.latest-release-card{
+    width:45%;
+    height: 80px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.latest-release-img{
+    width: 21%;
+    height: 80px;
+    /* border: 1px solid blue; */
+}
+.latest-card-img-img, .card-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border: 1px solid red; */
+}
+.latest-release-content{
+    width: 75%;
+    height: 80px;
+    /* border: 1px solid greenyellow; */
+}
+.song-info{
+    position: relative;
+    display: inline-block;
+    top: 1.5rem;
+    margin: auto;
+    vertical-align: middle;
+    width: 60%;
+    /* border: 1px solid black; */
+    font-size: 14px;
+}
+.elipses{
+    position: relative;
+    top: 0;
+    right: 0;
+    float: right;
+    padding: .7rem;
+}
+/* ----- Artist component ----- */
+.popular-artist{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+}
+.popular-artist-card{
+    width:15%;
+    height: 120px;
+    /* border: 1px solid black; */
+    justify-content: center;
+}
+.artist-img{
+    display: block;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin:auto;
+    /* border: 1px solid black; */
+    object-fit: cover;
+}
+.artist-name{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    bottom: 0;
+    /* border: 1px solid black; */
+}
+/* ----- station component ----- */
+.station{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    margin: 2rem 0;
+    padding: 1rem 0;
+    background-color: #30365a;
+}
+.station-card{
+    width:14%;
+    height: 100px;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+}
+.station-card-img{
+    display:block;
+    margin:auto;
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    opacity: 0.5;
+    object-fit: cover;
+    background-image: url("https://picsum.photos/100");
+    border-radius: 50%;
+}
+.station-card-heading{
+    width:100px;
+    height:100px;
+    opacity:1;
+    border-radius:0;
+}
+.station-card-text{
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    bottom: 55%;
+    /* border: 1px solid black; */
+}
+/* ----- Card component ----- */
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    width:30%;
+    height: 150px;
+    /* border: 1px solid black; */
+    margin: .5rem;
+
+}
+.card-img{
+    opacity: 0.6;
+}
+.card-text{
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    bottom: 55%;
+    /* border: 1px solid black; */
+}
+/*-- latest ---*/
+.latest{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+}
+.latest-card{
+    width:15%;
+    height: 120px;
+    /* border: 1px solid black; */
+}
+.latest-card-img{
+    width: 100%;
+    max-height: 80px;
+    /* border: 1px solid black; */
+    object-fit: cover;
+}
+.latest-card-title{
+    padding: 2px;
+    margin-bottom: .3rem;
+    height: 10px;
+    width: 95%;
+    /* border: 1px solid black; */
+}
+.latest-card-date{
+    padding: 2px;
+    height: 10px;
+    width: 95%;
+    /* border: 1px solid black; */
+}
+/* --- playlist-----*/
+.queue{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.playlist-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    margin: .1rem;
+}
+.playlist-number{
+    display: inline-block;
+    width: 10%;
+    padding-top: 1rem;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+.playlist-icon{
+    display: inline-block;
+    max-width: 15%;
+    padding: .1rem;
+    /* border: 1px solid black; */
+    object-fit: contain;
+}
+.playlist-info{
+    width: 58%;
+    /* border: 1px solid black; */
+    padding-top: .7rem;
+}
+.song-name, .latest-card-title, .song-title, .artist-name{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.singer, .latest-card-date, .song-date, .play-time{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: lightgray;
+}
+.favourite{
+    width: 10%;
+    text-align: center;
+    padding-top: 1rem;
+    /* border: 1px solid black; */
+}
+/* ---- music control bar ----*/
+.music-controls{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid black; */
+    background-color: #3f3f3f;
+    color: white;
+}
+.control-bar{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    text-align: center;
+    width: 40%;
+}
+.control-btns{
+    width: 100%;
+    justify-content: space-evenly;
+    padding-top: .5rem;
+    height: 60%;
+}
+.control-btns i{
+    display: inline-block;
+    padding: .1rem .5rem 0 .5rem;
+    border-radius: 50%;
+    border: none;
+}
+.seeker input{
+    width: 80%;
+    height: 40%;
+}
+.additional{
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* border: 1px solid black; */
+}
+.additional .control-btns{
+    display:block;
+    justify-content: center;
+    margin-top: .7rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.additional .control-btns input{
+    height: 40%;
+    color: greenyellow;
+}
+@media only screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+    .aside, .additional {
+        height: 0;
+        width: 0;
+        display: none;
+    }
+    .music-controls{
+        position: fixed;
+        left:0;
+        padding: 0;
+        margin: 0;
+        border: 1px solid cyan;
+    }
+    .carousel-card{
+        height: 70%;
+    }
+    .playlist-card, .popular-artist-card{
+        width: 40%;
+    }
+    .station-card, .latest-card{
+        width: 30%;
+        margin: .5rem;
+    }
+    .control-bar{
+        width: 60%;
+    }
+    .main, .card, .latest-release-card, .heading{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 552px){
+    .container{
+        flex-direction: column;
+    }
+    .aside, .additional, .playlist-card{
+        display: none;
+    }
+ 
+    .latest-card, .popular-artist-card, .station-card {
+        width: 70%;
+    }
+    .music-controls{
+        position: fixed;
+        left:0;
+        padding: 0;
+        margin: 0;
+        border: 1px solid cyan;
+    }
+    .main, .card, .latest-release-card, .control-bar{
+        width: 100%;
+    }
+    .popular-artist-card, .station-card{
+        height: 60%;
+    }
+    .artist-img, .station-card-img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50% 50%;
+    }
+}
+
+  
